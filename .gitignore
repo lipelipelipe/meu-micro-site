@@ -1,0 +1,35 @@
+# Arquivo de configuração para o Git.
+# Ignora arquivos e pastas que não devem ser versionados.
+
+# Dependências
+# Esta pasta é gerenciada pelo npm (ou yarn/pnpm) e pode ser reconstruída
+# a qualquer momento com o comando `npm install`. Versioná-la tornaria o
+# repositório extremamente pesado e propenso a conflitos.
+/node_modules/
+
+# Logs de depuração
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variáveis de Ambiente
+# CRÍTICO PARA A SEGURANÇA: Esta regra impede que arquivos de ambiente,
+# que contêm segredos como o BLOB_READ_WRITE_TOKEN, sejam enviados para o
+# repositório. O `*` garante que todos os arquivos como .env, .env.local,
+# .env.production sejam ignorados.
+.env*
+!.env.example
+!.env.ci
+
+# Artefatos de build e cache do Next.js
+# A pasta `.next` é gerada pelo comando `npm run build` e contém a versão
+# otimizada e compilada do seu site. Deve ser sempre gerada no ambiente
+# de deploy e nunca versionada.
+/.next/
+/out/
+
+# Arquivos de sistema operacional
+# Ignora arquivos de metadados gerados por diferentes sistemas operacionais.
+.DS_Store
+Thumbs.db
