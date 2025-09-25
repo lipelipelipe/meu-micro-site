@@ -5,6 +5,10 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Meu Micro Site',
   description: 'Demonstração de upload com Vercel Blob e Next.js',
+  // NOVO CÓDIGO ADICIONADO AQUI
+  verification: {
+    google: 'qumJFxsNxuvEWMlx_xFLfizt5GH0MVSxJ54I0u8dK4M',
+  },
 };
 
 export default function RootLayout({
@@ -18,7 +22,6 @@ export default function RootLayout({
         <header style={{ padding: '1rem', borderBottom: '1px solid #ddd', marginBottom: '2rem', backgroundColor: '#fafafa' }}>
           <nav style={{ maxWidth: '800px', margin: '0 auto', display: 'flex', gap: '1rem' }}>
             <Link href="/">Página Inicial</Link>
-            {/* NOVO LINK ADICIONADO ABAIXO */}
             <Link href="/blog">Blog</Link>
             <Link href="/contato">Contato (Upload)</Link>
           </nav>
