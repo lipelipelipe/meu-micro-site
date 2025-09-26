@@ -1,6 +1,5 @@
 import type { MetadataRoute } from 'next';
 
-// É importante que esta variável seja definida fora da função para que possa ser acessada.
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 /**
@@ -16,7 +15,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'], // Proíbe o acesso à pasta da API
       },
     ],
-    // Informa aos robôs onde encontrar o sitemap.
-    sitemap: `${siteUrl}/sitemap.xml`,
+    // ALTERAÇÃO CRÍTICA AQUI: Apontando para o novo nome do arquivo sitemap
+    sitemap: `${siteUrl}/sitemap_index.xml`,
   };
 }
